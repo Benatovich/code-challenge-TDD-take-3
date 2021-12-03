@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { 
     // myFunction,
-    addExclamationPoints, multiplyBy12ThenHalve, multiplyBySeven,
+    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray,
 } from '../functions.js';
 
 
@@ -89,6 +89,75 @@ test('multiplyBy12ThenHalve function should take an input, multiply it by twelve
     expect.equal(actual, expected, 'should return 72');
 });
 console.log(multiplyBy12ThenHalve(12));
+
+// divideThenMultiply tests
+test('divideThenMultiply should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
+    const expected = 10;
+
+    const actual = divideThenMultiply(8, 4, 5);
+
+    expect.equal(actual, expected, 'should return 10');
+});
+console.log(divideThenMultiply(8, 4, 5));
+
+test('divideThenMultiply should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
+    const expected = 500;
+
+    const actual = divideThenMultiply(10, 2, 100);
+
+    expect.equal(actual, expected, 'should return 500');
+});
+console.log(divideThenMultiply(10, 2, 100));
+
+test('divideThenMultiply should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
+    const expected = 220;
+
+    const actual = divideThenMultiply(100, 5, 11);
+
+    expect.equal(actual, expected, 'should return 220');
+});
+console.log(divideThenMultiply(100, 5, 11));
+
+// returnAsAnArray tests
+// NOTE: these tests require .deepEqual instead of .equal
+test('returnAsAnArray should take in three numbers and return those numbers in an array', (expect) => {
+    const expected = [8, 4, 5];
+
+    const actual = returnAsAnArray(8, 4, 5);
+
+    expect.deepEqual(actual, expected, 'should return [8, 4, 5]');
+});
+console.log(returnAsAnArray(8, 4, 5));
+
+test('returnAsAnArray should take in three numbers and return those numbers in an array', (expect) => {
+    const expected = [11, 35, 8];
+
+    const actual = returnAsAnArray(11, 35, 8);
+
+    expect.deepEqual(actual, expected, 'should return [11, 35, 8]');
+});
+console.log(returnAsAnArray(11, 35, 8));
+
+test('returnAsAnArray should take in three numbers and return those numbers in an array', (expect) => {
+    const expected = [22, 1, 19];
+
+    const actual = returnAsAnArray(22, 1, 19);
+
+    expect.deepEqual(actual, expected, 'should return [22, 1, 19]');
+});
+console.log(returnAsAnArray(22, 1, 19));
+
+// returnAsAString tests
+
+// makeLuckyGreeting tests
+
+// getSecondItem tests
+
+// getLastItem tests
+
+// getRandomNumber tests
+
+
 
 
 skip('this test should be skipped', (expect) => {
