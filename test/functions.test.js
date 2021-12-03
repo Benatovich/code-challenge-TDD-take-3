@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { 
     // myFunction,
-    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray,
+    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
 } from '../functions.js';
 
 
@@ -148,6 +148,24 @@ test('returnAsAnArray should take in three numbers and return those numbers in a
 console.log(returnAsAnArray(22, 1, 19));
 
 // returnAsAString tests
+test('returnAsAString should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected = '22119';
+
+    const actual = returnAsAString(22, 1, 19);
+
+    expect.equal(actual, expected, 'should return "22119"');
+});
+console.log(returnAsAString(22, 1, 19));
+
+test('returnAsAString should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected = '22119';
+
+    const actual = returnAsAString(22, 1, 19);
+
+    expect.equal(actual, expected, 'should return "22119"');
+});
+console.log(returnAsAString(22, 1, 19));
+
 
 // makeLuckyGreeting tests
 
