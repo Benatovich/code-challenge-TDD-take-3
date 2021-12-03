@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { 
     // myFunction,
-    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
+    addExclamationPoints, divideThenMultiply, getSecondItem, makeLuckyGreeting, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString, getLastItem, getRandomNumber,
 } from '../functions.js';
 
 
@@ -158,20 +158,106 @@ test('returnAsAString should take in three numbers and return those numbers mush
 console.log(returnAsAString(22, 1, 19));
 
 test('returnAsAString should take in three numbers and return those numbers mushed together as a string', (expect) => {
-    const expected = '22119';
+    const expected = '123';
 
-    const actual = returnAsAString(22, 1, 19);
+    const actual = returnAsAString(1, 2, 3);
 
-    expect.equal(actual, expected, 'should return "22119"');
+    expect.equal(actual, expected, 'should return "123"');
 });
-console.log(returnAsAString(22, 1, 19));
+console.log(returnAsAString(1, 2, 3));
 
+test('returnAsAString should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected = '915';
+
+    const actual = returnAsAString(9, 1, 5);
+
+    expect.equal(actual, expected, 'should return "915"');
+});
+console.log(returnAsAString(9, 1, 5));
 
 // makeLuckyGreeting tests
+test('makeLuckyGreeting should take in two numbers and return a greeting announcing that the sum of those numbers is today\'s lucky number', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 9.';
+
+    const actual = makeLuckyGreeting(1, 8);
+
+    expect.equal(actual, expected, 'should return "Hello! Your lucky number for the day is 9."');
+});
+console.log(makeLuckyGreeting(1, 8));
+
+test('makeLuckyGreeting should take in two numbers and return a greeting announcing that the sum of those numbers is today\'s lucky number', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 15.';
+
+    const actual = makeLuckyGreeting(6, 9);
+
+    expect.equal(actual, expected, 'should return "Hello! Your lucky number for the day is 15."');
+});
+console.log(makeLuckyGreeting(6, 9));
+
+test('makeLuckyGreeting should take in two numbers and return a greeting announcing that the sum of those numbers is today\'s lucky number', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 10.';
+
+    const actual = makeLuckyGreeting(3, 7);
+
+    expect.equal(actual, expected, 'should return "Hello! Your lucky number for the day is 10."');
+});
+console.log(makeLuckyGreeting(3, 7));
 
 // getSecondItem tests
+test('getSecondItem should take an array and return the second item in the array', (expect) => {
+    const expected = 'apple';
+
+    const actual = getSecondItem(['kiwi', 'apple', 'plum', 'peach']);
+
+    expect.equal(actual, expected, 'should return "apple"');
+});
+console.log(getSecondItem(['kiwi', 'apple', 'plum', 'peach']));
+
+test('getSecondItem should take an array and return the second item in the array', (expect) => {
+    const expected = 'pineapple';
+
+    const actual = getSecondItem(['kiwi', 'pineapple', 'plum']);
+
+    expect.equal(actual, expected, 'should return "pineapple"');
+});
+console.log(getSecondItem(['kiwi', 'pineapple', 'plum']));
+
+test('getSecondItem should take an array and return the second item in the array', (expect) => {
+    const expected = 'rat';
+
+    const actual = getSecondItem(['dog', 'rat', 'lizard', 'cow']);
+
+    expect.equal(actual, expected, 'should return "rat"');
+});
+console.log(getSecondItem(['dog', 'rat', 'lizard', 'cow']));
 
 // getLastItem tests
+test('getLastItem should take an array and return the last item in the array regardless of array length', (expect) => {
+    const expected = 'cow';
+
+    const actual = getLastItem(['dog', 'rat', 'lizard', 'cow']);
+
+    expect.equal(actual, expected, 'should return "cow"');
+});
+console.log(getLastItem(['dog', 'rat', 'lizard', 'cow']));
+
+test('getLastItem should take an array and return the last item in the array regardless of array length', (expect) => {
+    const expected = 'peach';
+
+    const actual = getLastItem(['kiwi', 'apple', 'plum', 'peach']);
+
+    expect.equal(actual, expected, 'should return "peach"');
+});
+console.log(getLastItem(['kiwi', 'apple', 'plum', 'peach']));
+
+test('getLastItem should take an array and return the last item in the array regardless of array length', (expect) => {
+    const expected = 'rat';
+
+    const actual = getLastItem(['dog', 'rat']);
+
+    expect.equal(actual, expected, 'should return "rat"');
+});
+console.log(getLastItem(['dog', 'rat']));
 
 // getRandomNumber tests
 
