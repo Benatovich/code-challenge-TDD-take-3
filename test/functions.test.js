@@ -260,7 +260,15 @@ test('getLastItem should take an array and return the last item in the array reg
 console.log(getLastItem(['dog', 'rat']));
 
 // getRandomNumber tests
-
+test('getRandomNumber should generate a random integer between 0 and 5', (expect) => {
+    const expected = 'number';
+    const actual = typeof getRandomNumber();
+    expect.equal(actual, expected, 'should return "number"');
+    const expected2 = true;
+    const actual2 = 0 <= actual <= 5;
+    expect.equal(actual2, expected2, 'should return true');
+});
+console.log(getRandomNumber());
 
 
 
